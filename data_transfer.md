@@ -13,7 +13,9 @@
 2. Go to your storage account, click Files under FILE SERVICE, add a new file share    
 ![Click Files](https://github.com/jinangela/azure-notes/blob/master/Snip20171228_8.png)    
 3. Click your file share, click Upload    
-![Upload](https://github.com/jinangela/azure-notes/blob/master/Snip20171228_10.png)
+![Upload](https://github.com/jinangela/azure-notes/blob/master/Snip20171228_10.png)    
+Alternatively, you can use CLI tool `blobxfer`: [https://github.com/Azure/blobxfer/blob/master/docs/10-cli-usage.md](https://github.com/Azure/blobxfer/blob/master/docs/10-cli-usage.md)
+
 ### Download
 You can simply click **download** in the options.
 ![Download](https://github.com/jinangela/azure-notes/blob/master/Snip20171228_11.png)
