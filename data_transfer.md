@@ -19,3 +19,8 @@ You can simply click **download** in the options.
 ![Download](https://github.com/jinangela/azure-notes/blob/master/Snip20171228_11.png)
 
 ## File transfer between cloud storage and virtual machine
+1. SSH into your VM: first create ssh keys ([https://docs.microsoft.com/en-us/azure/virtual-machines/linux/mac-create-ssh-keys](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/mac-create-ssh-keys)), then in cloud shell, type `ssh username@public_ip_address`(replace username and public_ip_address with your own).    
+2. Transfer data with AzCopy: [https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-linux?toc=%2fazure%2fstorage%2ffiles%2ftoc.json](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-linux?toc=%2fazure%2fstorage%2ffiles%2ftoc.json).     
+   * Please use corresponding commands when you install .NET core on different versions of Ubuntu systems.    
+   * You can find your own key at Storage accounts -> SETTINGS -> Access keys.
+   * In `--destination`, you should replace `/mnt` with `/home/username`.
