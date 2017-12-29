@@ -18,9 +18,14 @@
 You can simply click **download** in the options.
 ![Download](https://github.com/jinangela/azure-notes/blob/master/Snip20171228_11.png)
 
-## File transfer between cloud storage and virtual machine
+## File transfer between cloud storage file share and virtual machine
+### Use AzCopy to physically transfer data
 1. SSH into your VM: first create ssh keys ([https://docs.microsoft.com/en-us/azure/virtual-machines/linux/mac-create-ssh-keys](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/mac-create-ssh-keys)), then in cloud shell, type `ssh username@public_ip_address`(replace username and public_ip_address with your own).    
 2. Transfer data with AzCopy: [https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-linux?toc=%2fazure%2fstorage%2ffiles%2ftoc.json](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-linux?toc=%2fazure%2fstorage%2ffiles%2ftoc.json).     
    * Please use corresponding commands when you install .NET core on different versions of Ubuntu systems.    
    * You can find your own key at Storage accounts -> SETTINGS -> Access keys.
    * In `--destination`, you should replace `/mnt` with `/home/username`.
+### Use mount to operate remotely
+Detailed documentation: [https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-linux](https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-linux)    
+Note: If you create new folders under mymountpoint/, you will see warnings like `fchmod (file attributes) error: Operation not permitted
+ (warning) cannot set modif./access times    Operation not permitted`. Not sure why this happens, but you can still perform the operations.
