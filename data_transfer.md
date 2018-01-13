@@ -14,7 +14,9 @@
 ![Click Files](https://github.com/jinangela/azure-notes/blob/master/Snip20171228_8.png)    
 3. Click your file share, click Upload    
 ![Upload](https://github.com/jinangela/azure-notes/blob/master/Snip20171228_10.png)    
-Alternatively, you can use CLI tool `blobxfer`: [https://github.com/Azure/blobxfer/blob/master/docs/10-cli-usage.md](https://github.com/Azure/blobxfer/blob/master/docs/10-cli-usage.md)
+
+Alternatively, you can use CLI tool `blobxfer`: [https://github.com/Azure/blobxfer/blob/master/docs/10-cli-usage.md](https://github.com/Azure/blobxfer/blob/master/docs/10-cli-usage.md)    
+In your local command line(iTerm), type in something like this: `blobxfer upload --mode file --storage-account YOUR-STORAGE-ACCOUNT --sas "YOUR-KEY" --remote-path YOUR-FILE-SHARE --local-path /path/to/file --file-md5 --file-attributes --exclude '*.bak'`. You need to fill in `YOUR-STORAGE-ACCOUNT`, `YOUR-KEY`, `YOUR-FILE-SHARE` and `/path/to/file` here.
 
 ### Download
 You can simply click **download** in the options.
